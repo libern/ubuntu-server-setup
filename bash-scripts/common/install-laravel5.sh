@@ -10,4 +10,4 @@ echo "--------------- Installing Laravel 5";
 sudo apt-get -y install curl git zip
 
 # Install Laravel
-composer global require "laravel/installer"
+sudo composer global require "laravel/installer"
