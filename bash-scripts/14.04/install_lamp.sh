@@ -12,7 +12,7 @@ sudo apt-get update
 # install essentials
 #sudo apt-get install -y htop nethogs iptraf pydf zip nmap fail2ban glances git
 
-sudo apt-get install -y php5 apache2 libapache2-mod-php5 mysql-server php5-mysql php5-gd php5-mcrypt mysql-client php5-curl php5-xml
+sudo apt-get install -y php5 apache2 libapache2-mod-php5 mysql-server php5-mysql php5-gd php5-mcrypt mysql-client
 
 sudo a2enmod rewrite
 
