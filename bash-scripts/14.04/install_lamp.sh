@@ -1,6 +1,6 @@
 #! /bin/bash
 
-echo "\n=============== Installing Apache + PHP + MySQL ==================\n"
+echo "=============== Installing Apache + PHP + MySQL =================="
 echo -n "Press ENTER to continue install: "
 read confirm
 
