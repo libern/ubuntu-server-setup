@@ -42,7 +42,7 @@ server {
 
     client_max_body_size 29M;
 
-    root /srv/www/ssl.example.com/appletree/public;
+    root /srv/www/ssl.example.com/laravel/public;
     index index.php index.html index.htm;
 
     server_name ssl.example.com;
