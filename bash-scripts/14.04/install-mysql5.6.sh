@@ -17,6 +17,6 @@ sudo apt-get update;
 
 echo "--------------- Installing MySQL 5.6";
 
-# MySQL 5.5
-sudo apt-get install -y mysql-server-5.6 mysql-client
+# MySQL 5.6
+sudo apt-get install -y mysql-server-5.6 mysql-client-5.6
 sudo mysql_secure_installation
