@@ -10,7 +10,7 @@ sudo add-apt-repository -y ppa:ondrej/php
 sudo apt-get update
 
 # install essentials
-sudo apt-get install -y php5.6 apache2 libapache2-mod-php5.6 php5.6-mysql php5.6-gd php5.6-mcrypt
+sudo apt-get install -y php5.6 apache2 libapache2-mod-php5.6 php5.6-mysql php5.6-gd php5.6-mcrypt php5.6-mbstring php5.6-curl php5.6-sqlite3 php5.6-xml php5.6-bcmath
 
 sudo a2enmod rewrite
 
