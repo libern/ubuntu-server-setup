@@ -4,28 +4,10 @@ server {
     listen 80;
 
     # Host that will serve this project.
-    server_name ssl.example.com *.ssl.example.com;
-
-    # Redirect HTTP to HTTPS
-    rewrite ^/(.*) https://www.ssl.example.com/$1 permanent;
-
-}
-
-server {
-
-    # Port that the web server will listen on.
-    listen 443;
-
-    # SSL
-    ssl on;
-    ssl_certificate /srv/www/ssl.example.com/ssl/crt/wildcard_cert_combined.crt;
-    ssl_certificate_key /srv/www/ssl.example.com/ssl/private/private_key_no_passphrase.key;
-
-    # Host that will serve this project.
     server_name ssl.example.com;
 
     # Redirect HTTP to HTTPS
-    rewrite ^/(.*) https://www.ssl.example.com/$1 permanent;
+    rewrite ^/(.*) https://ssl.example.com/$1 permanent;
 
 }
 
@@ -43,7 +25,7 @@ server {
     root /srv/www/ssl.example.com/laravel/public;
     index index.php index.html index.htm;
 
-    server_name *.ssl.example.com;
+    server_name ssl.example.com;
 
     # Useful logs for debug.
     access_log      /srv/www/ssl.example.com/logs/access.log;
