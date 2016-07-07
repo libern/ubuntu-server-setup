@@ -17,6 +17,9 @@ server {
     server_name example.com;
     #server_name _ example.com;
 
+    # Redirect all urls that starts with /index.php/* to /*
+    rewrite ^/index.php/(.*)$ /$1 permanent;
+
     # Useful logs for debug.
     access_log      /srv/www/example.com/logs/access.log;
     error_log       /srv/www/example.com/logs/error.log;

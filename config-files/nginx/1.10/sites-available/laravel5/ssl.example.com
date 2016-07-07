@@ -47,6 +47,9 @@ server {
 
     server_name ssl.example.com;
 
+    # Redirect all urls that starts with /index.php/* to /*
+    rewrite ^/index.php/(.*)$ /$1 permanent;
+
     # Useful logs for debug.
     access_log      /srv/www/ssl.example.com/logs/access.log;
     error_log       /srv/www/ssl.example.com/logs/error.log;
