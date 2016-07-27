@@ -28,7 +28,7 @@ if ! grep -q "$PHP7_PPA" /etc/apt/sources.list /etc/apt/sources.list.d/*; then
     sudo apt-get update;
 fi
 
-apt_get_packages=( "git" "php7.0-fpm" "php7.0-mysql" "php7.0-gd" "php7.0-cli" "php7.0-common" "php7.0-json" "php7.0-curl" "php7.0-mcrypt" "php7.0-readline" "php-mongodb" "php-redis" "php7.0-sqlite" "php7.0-bcmath" "php7.0-mbstring" "php7.0-xml" "php7.0-intl"); # "python-pip"
+apt_get_packages=( "git" "php7.0-fpm" "php7.0-mysql" "php7.0-gd" "php7.0-cli" "php7.0-common" "php7.0-json" "php7.0-curl" "php7.0-mcrypt" "php7.0-readline" "php-mongodb" "php-redis" "php7.0-sqlite" "php7.0-bcmath" "php7.0-mbstring" "php7.0-xml" "php7.0-intl" "php-imagick"); # "python-pip"
 # php7.0 php7.0-fpm php7.0-mysql php7.0-cli php7.0-common php7.0-curl php7.0-gd php7.0-json php7.0-mcrypt php7.0-readline
 # api: php5-memcached php5-mongo php5-redis
 for i in "${!apt_get_packages[@]}"; do
