@@ -24,6 +24,7 @@ echo "--------------- Installing Tools";
 
 PHP7_PPA="ondrej/php"
 if ! grep -q "$PHP7_PPA" /etc/apt/sources.list /etc/apt/sources.list.d/*; then
+    sudo apt-get install software-properties-common
     sudo add-apt-repository ppa:$PHP7_PPA;
     sudo apt-get update;
 fi
