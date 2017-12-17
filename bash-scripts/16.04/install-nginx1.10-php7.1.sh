@@ -18,7 +18,7 @@ sudo apt-get -y upgrade;
 echo "--------------- Installing Nginx";
 
 # nginx 1.10.0 (Ubuntu)
-sudo apt-get install -y nginx
+sudo apt-get install -y nginx --allow-unauthenticated
 
 echo "--------------- Installing Tools";
 
@@ -36,7 +36,7 @@ for i in "${!apt_get_packages[@]}"; do
     if [ $(dpkg-query -W -f='${Status}' "${apt_get_packages[$i]}" 2>/dev/null | grep -c "ok installed") -eq 0 ];
     then
         echo "--------------- Installing ${apt_get_packages[$i]}";
-        sudo apt-get install -y ${apt_get_packages[$i]};
+        sudo apt-get install -y ${apt_get_packages[$i]} --allow-unauthenticated;
     else
         echo "--------------- '${apt_get_packages[$i]}' already installed";
     fi
