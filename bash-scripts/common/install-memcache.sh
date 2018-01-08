@@ -15,7 +15,7 @@ sudo apt-get update;
 #  INSTALL
 #
 
-echo "--------------- Installing Redis";
+echo "--------------- Installing Memcache/Memcached";
 
 # Redis
 sudo apt-get install -y php-memcache php-memcached
