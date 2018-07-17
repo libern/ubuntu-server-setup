@@ -32,10 +32,10 @@ server {
     location ~ \.php$ {
             include snippets/fastcgi-php.conf;
 
-    #       # With php7.1-cgi alone:
+    #       # With php7.2-cgi alone:
     #       fastcgi_pass 127.0.0.1:9000;
-    #       # With php7.1-fpm:
-            fastcgi_pass unix:/run/php/php7.1-fpm.sock;
+    #       # With php7.2-fpm:
+            fastcgi_pass unix:/run/php/php7.2-fpm.sock;
     }
 
     # deny access to .htaccess files, if Apache's document root
