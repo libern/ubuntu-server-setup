@@ -7,6 +7,7 @@ echo "--------------- Config MySQL Opt";
 
 cd /tmp
 curl -OL https://dev.mysql.com/get/mysql-apt-config_0.8.10-1_all.deb
+sudo apt-key adv --keyserver keys.gnupg.net --recv-keys 5072E1F5
 sudo dpkg -i mysql-apt-config*
 
 #
