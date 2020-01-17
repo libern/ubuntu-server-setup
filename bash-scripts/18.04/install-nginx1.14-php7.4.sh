@@ -29,8 +29,8 @@ if ! grep -q "$PHP7_PPA" /etc/apt/sources.list /etc/apt/sources.list.d/*; then
     sudo apt-get update;
 fi
 
-apt_get_packages=( "git" "zip" "imagemagick" "php7.3-fpm" "php7.3-mysql" "php7.3-gd" "php7.3-cli" "php7.3-common" "php7.3-json" "php7.3-curl" "php7.3-readline" "php-mongodb" "php-redis" "php7.3-sqlite" "php7.3-bcmath" "php7.3-mbstring" "php7.3-zip" "php7.3-xml" "php7.3-intl" "php-imagick"); # "python-pip"
-# php7.3 php7.3-fpm php7.3-mysql php7.3-cli php7.3-common php7.3-curl php7.3-gd php7.3-json php7.3-readline
+apt_get_packages=( "git" "zip" "imagemagick" "php7.4-fpm" "php7.4-mysql" "php7.4-gd" "php7.4-cli" "php7.4-common" "php7.4-json" "php7.4-curl" "php7.4-readline" "php-mongodb" "php-redis" "php7.4-sqlite" "php7.4-bcmath" "php7.4-mbstring" "php7.4-zip" "php7.4-xml" "php7.4-intl" "php-imagick"); # "python-pip"
+# php7.4 php7.4-fpm php7.4-mysql php7.4-cli php7.4-common php7.4-curl php7.4-gd php7.4-json php7.4-readline
 # api: php5-memcached php5-mongo php5-redis
 for i in "${!apt_get_packages[@]}"; do
     if [ $(dpkg-query -W -f='${Status}' "${apt_get_packages[$i]}" 2>/dev/null | grep -c "ok installed") -eq 0 ];
