@@ -6,13 +6,13 @@
 # UPDATE / UPGRADE
 #
 
-echo "--------------- Disable IPv6";
+#echo "--------------- Disable IPv6";
 # https://askubuntu.com/questions/1415009/add-apt-respository-keeps-timing-out
 # test: ping ppa.launchpadcontent.net
 
-sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
-sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
-sudo sysctl -w net.ipv6.conf.lo.disable_ipv6=1
+#sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
+#sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
+#sudo sysctl -w net.ipv6.conf.lo.disable_ipv6=1
 
 echo "--------------- Update + Upgrade";
 
