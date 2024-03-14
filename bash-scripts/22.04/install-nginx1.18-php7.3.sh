@@ -49,3 +49,6 @@ for i in "${!apt_get_packages[@]}"; do
         echo "--------------- '${apt_get_packages[$i]}' already installed";
     fi
 done;
+
+## Switch Default PHP Version for CLI
+#sudo update-alternatives --config php
