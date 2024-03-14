@@ -6,6 +6,14 @@
 # UPDATE / UPGRADE
 #
 
+echo "--------------- Disable IPv6";
+# https://askubuntu.com/questions/1415009/add-apt-respository-keeps-timing-out
+# test: ping ppa.launchpadcontent.net
+
+sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
+sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
+sudo sysctl -w net.ipv6.conf.lo.disable_ipv6=1
+
 echo "--------------- Update + Upgrade";
 
 sudo apt update;
@@ -22,8 +30,10 @@ sudo apt-get install -y nginx --allow-unauthenticated
 
 echo "--------------- Installing Tools";
 
-PHP7_PPA="ondrej/php"
 sudo apt install software-properties-common ca-certificates lsb-release apt-transport-https;
+
+echo "--------------- Adding Repository";
+PHP7_PPA="ondrej/php"
 LC_ALL=C.UTF-8 sudo add-apt-repository ppa:$PHP7_PPA;
 sudo apt update;
 
