@@ -29,7 +29,7 @@ if ! grep -q "$PHP7_PPA" /etc/apt/sources.list /etc/apt/sources.list.d/*; then
     sudo apt-get update;
 fi
 
-apt_get_packages=( "git" "zip" "imagemagick" "php7.3-fpm" "php7.3-mysql" "php7.3-gd" "php7.3-cli" "php7.3-common" "php7.3-json" "php7.3-curl" "php7.3-readline" "php-mongodb" "php-redis" "php7.3-sqlite" "php7.3-bcmath" "php7.3-mbstring" "php7.3-zip" "php7.3-xml" "php7.3-intl" "php-imagick"); # "python-pip"
+apt_get_packages=( "git" "zip" "imagemagick" "php7.3-fpm" "php7.3-mysql" "php7.3-gd" "php7.3-cli" "php7.3-common" "php7.3-json" "php7.3-curl" "php7.3-readline" "php-mongodb" "php-redis" "php7.3-sqlite" "php7.3-bcmath" "php7.3-mbstring" "php7.3-zip" "php7.3-xml" "php7.3-intl" "php7.3-imagick" "php7.3-redis"); # "python-pip"
 # php7.3 php7.3-fpm php7.3-mysql php7.3-cli php7.3-common php7.3-curl php7.3-gd php7.3-json php7.3-readline
 # api: php5-memcached php5-mongo php5-redis
 for i in "${!apt_get_packages[@]}"; do
