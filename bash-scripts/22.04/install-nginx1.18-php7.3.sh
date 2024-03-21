@@ -52,3 +52,6 @@ done;
 
 ## Switch Default PHP Version for CLI
 #sudo update-alternatives --config php
+echo "Change to PHP7.3 Using: ";
+echo "    > sudo update-alternatives --config php";
+sudo update-alternatives --config php;
